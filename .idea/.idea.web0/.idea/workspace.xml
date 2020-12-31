@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2803f431-6020-400b-99d9-450c4a4c41a6" name="Default Changelist" comment="" />
+    <list default="true" id="2803f431-6020-400b-99d9-450c4a4c41a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChangeCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SingleCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SingleCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ClothPart.cs" root0="FORCE_HIGHLIGHTING" />
@@ -22,10 +34,12 @@
         <option value="$PROJECT_DIR$/Assets/ClothPart.cs" />
         <option value="$PROJECT_DIR$/Assets/SingleCloth.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/AdjustClothLength.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1m0wr5tzORafnWqoxYTFglHGeDK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,7 +83,8 @@
       <workItem from="1609237252135" duration="6586000" />
       <workItem from="1609254875881" duration="3569000" />
       <workItem from="1609326368220" duration="3635000" />
-      <workItem from="1609340152953" duration="4065000" />
+      <workItem from="1609340152953" duration="4675000" />
+      <workItem from="1609419377596" duration="2022000" />
     </task>
     <servers />
   </component>

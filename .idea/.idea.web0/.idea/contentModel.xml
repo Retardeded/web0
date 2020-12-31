@@ -4,6 +4,7 @@
     <e p="C:\U\web0" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AdjustClothLength.cs" t="Include" />
         <e p="AvatarController.cs" t="Include" />
         <e p="ChangeCloth.cs" t="Include" />
         <e p="ClothFromMesh.cs" t="Include" />

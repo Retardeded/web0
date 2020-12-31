@@ -43,14 +43,10 @@ public class SingleCloth : MonoBehaviour
         if(!stretching)
             return;
         
-
         //mesh.Clear();
-        vertices = mesh.vertices;
         //Vector3[] normals = mesh.normals;
-        lengthenClothPart();
 
-        mesh.vertices = vertices;
-        
+
     }
 
     public void changeClothPart(int index)
@@ -58,8 +54,10 @@ public class SingleCloth : MonoBehaviour
         currentClothPart = clothParts[index];
     }
 
-    private void lengthenClothPart()
+    public void lengthenClothPart(float scaleFactor)
     {
+        vertices = mesh.vertices;
+
         Vector3 stretchVector = currentClothPart.stretchAxis;
         
         Debug.Log("stretch  " + stretchVector);
@@ -72,12 +70,16 @@ public class SingleCloth : MonoBehaviour
             {
                 if (currVector.y < currentClothPart.clothPartCenter.y)
                 {
+                    //vertices[i] = baseMesh.vertices[i] - Vector3.Distance(currVector, currentClothPart.clothPartCenter) *
+                    //    stretchVector * Mathf.Sin(Time.time);
                     vertices[i] = baseMesh.vertices[i] - Vector3.Distance(currVector, currentClothPart.clothPartCenter) *
-                        stretchVector * Mathf.Sin(Time.time);
+                    stretchVector * scaleFactor;
                 }
             }
             
         }
+        
+        mesh.vertices = vertices;
     }
 
 

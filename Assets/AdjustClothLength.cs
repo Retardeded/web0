@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeCloth : MonoBehaviour
+public class AdjustClothLength : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private int clothPartIndex;
@@ -10,12 +10,12 @@ public class ChangeCloth : MonoBehaviour
     private SingleCloth clothToHandle;
     private float scaleFactor = 0.1f;
     
-    public void ChangeClothPart()
+    public void ChangeClothPart(float scaleFactor)
     {
         Debug.Log("chaing part");
         clothToHandle.changeClothPart(clothPartIndex);
         clothToHandle.lengthenClothPart(scaleFactor);
-        scaleFactor += 0.1f;
+        //scaleFactor += 0.1f;
     }
     void Start()
     {
