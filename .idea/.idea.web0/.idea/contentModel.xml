@@ -4,14 +4,26 @@
     <e p="C:\U\web0" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AdjustClothLength.cs" t="Include" />
-        <e p="AvatarController.cs" t="Include" />
-        <e p="ChangeCloth.cs" t="Include" />
-        <e p="ClothFromMesh.cs" t="Include" />
-        <e p="ClothPart.cs" t="Include" />
-        <e p="EditMesh.cs" t="Include" />
-        <e p="ResetMesh.cs" t="Include" />
-        <e p="SingleCloth.cs" t="Include" />
+        <e p="Materials" t="Include">
+          <e p="NewSurfaceShader.shader" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AvatarController.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="ClothManager.cs" t="Include" />
+          <e p="MenuFacade.cs" t="Include" />
+          <e p="ModifyClothScripts" t="Include">
+            <e p="AdjustMaterialStretchtness.cs" t="Include" />
+            <e p="ChangeCloth.cs" t="Include" />
+            <e p="ClothPart.cs" t="Include" />
+            <e p="LenghtenCloth.cs" t="Include" />
+            <e p="LenghtenClothSymmetrically.cs" t="Include" />
+            <e p="ModifyCloth.cs" t="Include" />
+            <e p="ResizeSingleCloth.cs" t="Include" />
+            <e p="SingleCloth.cs" t="Include" />
+          </e>
+          <e p="StateHandler.cs" t="Include" />
+        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
