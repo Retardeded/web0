@@ -68,8 +68,8 @@ public class StateHandler : MonoBehaviour
                     newConstraints = cloth.coefficients;
                     for (int i = 0; i < newConstraints.Length/10; i++)
                     {
-                        newConstraints[i].maxDistance = 0.05f;
-                        newConstraints[i + newConstraints.Length/2].maxDistance = 0.05f;
+                        newConstraints[i].maxDistance = 0.02f;
+                        newConstraints[i + newConstraints.Length/2 + newConstraints.Length/10].maxDistance = 0.02f;
                     }
                     cloth.coefficients = newConstraints;
                     cloth.enabled = false;

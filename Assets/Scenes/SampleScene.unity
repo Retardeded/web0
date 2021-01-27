@@ -23392,6 +23392,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Superman
       m_Image: {fileID: 0}
+    - m_Text: HardReset
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

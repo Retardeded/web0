@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuFacade : MonoBehaviour
@@ -74,6 +75,10 @@ public class MenuFacade : MonoBehaviour
                 setCameraPosition(2f, 0, 0);
                 setSliders(-2f, -2f, 0, 0, 0, 0,
                     1f, 1f, 4, 0.9f, 1f, 0);
+                break;
+            case 4: //hard reset
+                Scene scene = SceneManager.GetActiveScene(); 
+                SceneManager.LoadScene(scene.name);
                 break;
         }
     }
