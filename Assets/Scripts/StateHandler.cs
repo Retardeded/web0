@@ -13,16 +13,16 @@ public class StateHandler : MonoBehaviour
       ChangeCloth,
       ChangeClothSymmetric,
       UnchangableCloth,
-      UnchagnableClothSymmetric
+      UnchangableClothSymmetric
     }
     
     [SerializeField] private TextMeshProUGUI labelText;
     
-    private string changingAllowedStateText = "Changing cloths allowed";
+    private string changingAllowedStateText = "Check this to see how cloth behaves";
     private string unchangableClothsStateText = "Check this to change cloths";
     string changingUITag = "changingclothui";
-    
-    public static State STATE = State.ChangeClothSymmetric;
+
+    public static State STATE;
     private Toggle _toggle;
     private GameObject[] changingClothUI;
     private List<Cloth> _allCloths = new List<Cloth>();
@@ -46,7 +46,7 @@ public class StateHandler : MonoBehaviour
 
             if (STATE == State.ChangeClothSymmetric)
             {
-                STATE = State.UnchagnableClothSymmetric;
+                STATE = State.UnchangableClothSymmetric;
             }
             else
             {
@@ -80,7 +80,7 @@ public class StateHandler : MonoBehaviour
         }
         else
         {
-            if (STATE == State.UnchagnableClothSymmetric)
+            if (STATE == State.UnchangableClothSymmetric)
             {
                 STATE = State.ChangeClothSymmetric;
             }
@@ -112,7 +112,8 @@ public class StateHandler : MonoBehaviour
         }
         changingClothUI = GameObject.FindGameObjectsWithTag(changingUITag);
         _toggle = GetComponent<Toggle>();
-        _toggle.isOn = false;
-        ChangeState(false);
+        _toggle.isOn = true;
+        STATE = State.UnchangableClothSymmetric;
+        ChangeState(true);
     }
 }

@@ -15,6 +15,7 @@
           <e p="ModifyClothScripts" t="Include">
             <e p="AdjustMaterialStretchtness.cs" t="Include" />
             <e p="ChangeCloth.cs" t="Include" />
+            <e p="ChangeSingleColor.cs" t="Include" />
             <e p="ClothPart.cs" t="Include" />
             <e p="LenghtenCloth.cs" t="Include" />
             <e p="LenghtenClothSymmetrically.cs" t="Include" />

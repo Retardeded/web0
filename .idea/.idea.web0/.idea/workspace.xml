@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2803f431-6020-400b-99d9-450c4a4c41a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Orange.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeCloth.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,11 +61,13 @@
         <option value="$PROJECT_DIR$/Assets/MenuFacade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AvatarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothPart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleCloth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeSingleColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeSingleColor.cs" />
       </list>
     </option>
   </component>
@@ -148,6 +153,10 @@
       <workItem from="1611653349238" duration="363000" />
       <workItem from="1611654910589" duration="141000" />
       <workItem from="1611658240875" duration="390000" />
+      <workItem from="1611745996485" duration="637000" />
+      <workItem from="1611918408599" duration="1523000" />
+      <workItem from="1612022404873" duration="1678000" />
+      <workItem from="1612101141367" duration="3797000" />
     </task>
     <servers />
   </component>
