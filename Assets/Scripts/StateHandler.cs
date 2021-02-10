@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,112 +9,77 @@ using UnityEngine.UI;
 public class StateHandler : MonoBehaviour
 {
     // Start is called before the first frame update
-    public enum State 
+    /*public enum State 
     {
       ChangeCloth,
       ChangeClothSymmetric,
       UnchangableCloth,
       UnchangableClothSymmetric
-    }
-    
-    [SerializeField] private TextMeshProUGUI labelText;
-    
-    private string changingAllowedStateText = "Check this to see how cloth behaves";
-    private string unchangableClothsStateText = "Check this to change cloths";
+      //klasa dziedziczy po bazowej, obiket mowi w jakim jest stanie, obikety dziedzicza handler i to ona w sobie mowi jaki jest stan
+    }*/
+
+    [SerializeField] public TextMeshProUGUI labelText;
+
+    public string changingAllowedStateText = "Check this to see how cloth behaves";
+    public string unchangableClothsStateText = "Check this to change cloths";
     string changingUITag = "changingclothui";
 
-    public static State STATE;
-    private Toggle _toggle;
-    private GameObject[] changingClothUI;
-    private List<Cloth> _allCloths = new List<Cloth>();
+    public static State state;
 
-    public void MakeStretchingSymmetric(bool symmetricStretch)
+    public Toggle _toggle;
+    public GameObject symmetricToogle;
+    public static List<GameObject> changingClothUI;
+    public List<Cloth> _allCloths = new List<Cloth>();
+
+    public void setState(State s)
     {
-        if (symmetricStretch)
-        {
-            STATE = State.ChangeClothSymmetric;
-        }
-        else
-        {
-            STATE = State.ChangeCloth;
-        }
+        state = s;
     }
 
-    public void ChangeState(bool allowChange)
+    public static State getState()
     {
-        if (!allowChange)
-        {
-
-            if (STATE == State.ChangeClothSymmetric)
-            {
-                STATE = State.UnchangableClothSymmetric;
-            }
-            else
-            {
-                STATE = State.UnchangableCloth;
-            }
-            labelText.text = unchangableClothsStateText;
-            foreach (var ui in changingClothUI)
-            {
-                ui.SetActive(false);
-            }
-
-
-            foreach (var cloth in _allCloths)
-            {
-                if (cloth.tag == "bottom")
-                {
-                    cloth.enabled = true;
-                    ClothSkinningCoefficient[] newConstraints; 
-                    newConstraints = cloth.coefficients;
-                    for (int i = 0; i < newConstraints.Length/10; i++)
-                    {
-                        newConstraints[i].maxDistance = 0.02f;
-                        newConstraints[i + newConstraints.Length/2 + newConstraints.Length/10].maxDistance = 0.02f;
-                    }
-                    cloth.coefficients = newConstraints;
-                    cloth.enabled = false;
-                }
-                
-                cloth.enabled = true;
-            }
-        }
-        else
-        {
-            if (STATE == State.UnchangableClothSymmetric)
-            {
-                STATE = State.ChangeClothSymmetric;
-            }
-            else
-            {
-                STATE = State.ChangeCloth;
-            }
-            labelText.text = changingAllowedStateText;
-            AvatarController.anim.SetTrigger("Tpose");
-            
-            foreach (var ui in changingClothUI)
-            {
-                ui.SetActive(true);
-            }
-            
-            foreach (var cloth in _allCloths)
-            {
-                cloth.ClearTransformMotion();
-                cloth.enabled = false;
-            }
-        }
+        return state;
     }
+
+    public void SetSymmetricity(bool symmetricStretch)
+    {
+        state.setSymmetricity(this, symmetricStretch);
+    }
+
+    public void SetChangeability(bool allowChange)
+    {
+        state.setChangeability(this, allowChange);
+    }
+
+    public static void StrechCorrespondingPart(LenghtenSingleClothSymmetrically context, float factor)
+    {
+        state.strechCorrespondingPart(context, factor);
+    }
+
+    private void Awake()
+    {
+        changingClothUI = new List<GameObject>();
+        changingClothUI.Add(symmetricToogle);
+    }
+
     void Start()
     {
+        state = new UnchangeableClothSymmetricState();
         SingleCloth[] singleCloths = FindObjectsOfType<SingleCloth>();
         foreach (var cloth in singleCloths)
         {
             _allCloths.Add(cloth.GetComponent<Cloth>());
         }
-        changingClothUI = GameObject.FindGameObjectsWithTag(changingUITag);
+        
+        //changingClothUI = GameObject.FindGameObjectsWithTag(changingUITag);
         _toggle = GetComponent<Toggle>();
         _toggle.isOn = true;
-        STATE = State.UnchangableClothSymmetric;
-        ChangeState(true);
+
+        state.setChangeability(this, true);
+    }
+
+    public static void AddToChagingUI(GameObject obj)
+    {
+        changingClothUI.Add(obj);
     }
 }

@@ -10,8 +10,13 @@ public class ClothManager : MonoBehaviour
     
     [SerializeField] private GameObject topHolder;
     [SerializeField] private GameObject bottomHolder;
-    private SingleCloth currentTop;
-    private SingleCloth currentBottom;
+    public static SingleCloth currentTop;
+    public static SingleCloth currentBottom;
+
+    public static Dictionary<string, int> top2ix = new Dictionary<string, int>();
+    public static Dictionary<string, int> bottom2ix = new Dictionary<string, int>();
+
+    public static GameObject objWithNewParts;
 
     void Start()
     {
@@ -19,6 +24,22 @@ public class ClothManager : MonoBehaviour
         currentBottom = bottomHolder.transform.GetChild(0).GetComponent<SingleCloth>();
         SetupNewCloth(currentTop, topSingleCloths, 0);
         SetupNewCloth(currentBottom, bottomSingleCloths, 0);
+
+        int i = 0;
+        foreach (Transform child in topSingleCloths.transform)
+        {
+            //Debug.Log("TOPIX: " + child.gameObject.name );
+            top2ix[child.gameObject.name] = i++;
+        }
+
+        i = 0;
+        foreach (Transform child in bottomSingleCloths.transform)
+        {
+            bottom2ix[child.gameObject.name] = i++;
+        }
+
+       //Debug.Log("TOPIX: " + Serialize(top2ix.ToList()));
+        //Debug.Log("BOTIX: " + Serialize(bottom2ix.ToList()));
     }
     
     public void changeTop(int index)
@@ -31,29 +52,16 @@ public class ClothManager : MonoBehaviour
         SetupNewCloth(currentBottom, bottomSingleCloths, index);
     }
 
-    private void SetupNewCloth(SingleCloth singleCloth, GameObject singleCloths, int index)
-    {
-        
-        for (var i = singleCloth.transform.childCount - 1; i >= 0; i--)
-        {
-            var child = singleCloth.transform.GetChild(i);
-            child.transform.parent = null;
-            Destroy(child.gameObject);
-        }
-
-        GameObject objWithNewParts = singleCloths.transform.GetChild(index).gameObject;
-
-        for (var i = objWithNewParts.transform.childCount - 1; i >= 0; i--)
-        {
-            var child = objWithNewParts.transform.GetChild(i);
-            child.transform.parent = singleCloth.transform;
-        }
-        
-        if(singleCloth.mesh != null)
+    private static void SetupNewCloth(SingleCloth singleCloth, GameObject singleCloths, int index)
+    {   
+        if(singleCloth.baseMesh != null)
             singleCloth.baseMesh.vertices = singleCloth.mesh.vertices;
+        
+        objWithNewParts = singleCloths.transform.GetChild(index).gameObject;
 
-        MeshFilter meshFilter = objWithNewParts.GetComponent<MeshFilter>();
-        singleCloth.baseMesh = meshFilter.mesh;
-        singleCloth.SetupClothParts(objWithNewParts.name);
+        ClothPool.RelaseCloth(singleCloth.currentClothName);
+        ClothPool.ClothPartFullData clothData = ClothPool.Acquire(objWithNewParts.name);
+
+        singleCloth.SetupMesh(objWithNewParts.name, clothData);
     }
 }

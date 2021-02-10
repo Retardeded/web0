@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: -6400281290468069383, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
+      objectReference: {fileID: -2432090755550338912, guid: 6bf5db4ef3362394d974d8715fc9e709, type: 3}
     - target: {fileID: 919132149155446097, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
       propertyPath: m_Name
       value: currentTop
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 39831353}
   m_Layer: 5
   m_Name: ChangeSliders
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1584,7 +1584,7 @@ Transform:
   m_Children:
   - {fileID: 712747611}
   m_Father: {fileID: 2034597645}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &74774730
 BoxCollider:
@@ -2498,7 +2498,7 @@ Transform:
   m_Children:
   - {fileID: 1070470159}
   m_Father: {fileID: 1817779387}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &152016538
 BoxCollider:
@@ -2538,12 +2538,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162578149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1.05, z: 1}
   m_Children:
   - {fileID: 68043489}
   m_Father: {fileID: 1289662673}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &162578151
 BoxCollider:
@@ -2624,7 +2624,7 @@ Transform:
   m_Children:
   - {fileID: 1074846559}
   m_Father: {fileID: 2034597645}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &163682288
 BoxCollider:
@@ -2699,7 +2699,7 @@ Transform:
   m_Children:
   - {fileID: 2045652493}
   m_Father: {fileID: 1456444920}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -145}
 --- !u!65 &173144489
 BoxCollider:
@@ -2988,12 +2988,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1500502933}
+  - {fileID: 2026736162}
   - {fileID: 1578063220}
   - {fileID: 1785274553}
   - {fileID: 1817779387}
   - {fileID: 2034597645}
-  - {fileID: 1500502933}
-  - {fileID: 2026736162}
   m_Father: {fileID: 659825192}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3022,12 +3022,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223266843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1.05, z: 1}
   m_Children:
   - {fileID: 1316579579}
   m_Father: {fileID: 1260221265}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &223266845
 BoxCollider:
@@ -3074,7 +3074,7 @@ GameObject:
   - component: {fileID: 234297266}
   m_Layer: 5
   m_Name: ChangeBottomColorRSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3114,6 +3114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   colorPart: 114
 --- !u!114 &234297267
@@ -3166,19 +3167,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 234297266}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &234445307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3198,7 @@ Transform:
   m_Children:
   - {fileID: 760988759}
   m_Father: {fileID: 1578063220}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85}
 --- !u!65 &234445309
 BoxCollider:
@@ -3222,7 +3211,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.29065964, z: 0.4}
+  m_Size: {x: 0.9, y: 0.29065964, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &243927669
 GameObject:
@@ -4585,7 +4574,7 @@ PrefabInstance:
     - target: {fileID: -6400281290468069383, guid: f3820e9eddcdc2542ad3b659f737e151, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: 366b664380d17d44990980edc8237e67, type: 3}
+      objectReference: {fileID: -2432090755550338912, guid: df5d5fa3196bcbd4586cbf9dee3ef54d, type: 3}
     - target: {fileID: 919132149155446097, guid: f3820e9eddcdc2542ad3b659f737e151, type: 3}
       propertyPath: m_Name
       value: currentBottom
@@ -4631,7 +4620,7 @@ Transform:
   m_Children:
   - {fileID: 2000498339}
   m_Father: {fileID: 1817779387}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -95}
 --- !u!65 &331124995
 BoxCollider:
@@ -4676,7 +4665,7 @@ Transform:
   m_Children:
   - {fileID: 1080042044}
   m_Father: {fileID: 1289662673}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!65 &337558455
 BoxCollider:
@@ -4790,6 +4779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5d3f4c545400d4fa12a4c4bb3558c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
 --- !u!114 &385153854
 MonoBehaviour:
@@ -4841,19 +4831,7 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 385153853}
-        m_TargetAssemblyTypeName: AdjustMaterialStretchtness, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &387641180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,7 +4862,7 @@ Transform:
   m_Children:
   - {fileID: 254922390}
   m_Father: {fileID: 1260221265}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -145}
 --- !u!65 &387641182
 BoxCollider:
@@ -4910,7 +4888,7 @@ GameObject:
   - component: {fileID: 398835020}
   m_Layer: 5
   m_Name: StretchSliders
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4926,7 +4904,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1882811315}
   - {fileID: 1701266939}
   - {fileID: 1249681315}
   - {fileID: 778972756}
@@ -5719,7 +5696,7 @@ Transform:
   m_Children:
   - {fileID: 2021648574}
   m_Father: {fileID: 2026736162}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &491926648
 BoxCollider:
@@ -5800,7 +5777,7 @@ Transform:
   m_Children:
   - {fileID: 169240000}
   m_Father: {fileID: 1500502933}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &501655951
 BoxCollider:
@@ -6053,7 +6030,7 @@ GameObject:
   - component: {fileID: 543603413}
   m_Layer: 5
   m_Name: ChangeBottomSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6093,6 +6070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b33c7e0ef158945920602b7bce4fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   _clothManager: {fileID: 659825193}
   isTop: 0
 --- !u!114 &543603414
@@ -6145,19 +6123,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 543603413}
-        m_TargetAssemblyTypeName: ChangeCloth, Assembly-CSharp
-        m_MethodName: ChangeCurrentBottom
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &553707643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6916,7 +6882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Adjust Stretching of \nTop Material"
+  m_text: Top material stiffnes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7117,7 +7083,7 @@ GameObject:
   - component: {fileID: 625188811}
   m_Layer: 5
   m_Name: ChangeTopColorRSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7157,6 +7123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   colorPart: 114
 --- !u!114 &625188812
@@ -7209,19 +7176,7 @@ MonoBehaviour:
   m_Value: -0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 625188811}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &626107995
 GameObject:
   m_ObjectHideFlags: 0
@@ -7256,7 +7211,7 @@ RectTransform:
   - {fileID: 500699390}
   - {fileID: 896670566}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7275,6 +7230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4ac17cc851af94d9289969c8c2fb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
 --- !u!114 &626107998
 MonoBehaviour:
@@ -7326,19 +7282,7 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 626107997}
-        m_TargetAssemblyTypeName: ResizeSingleCloth, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &629426783
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,7 +7440,7 @@ RectTransform:
   - {fileID: 652181638}
   - {fileID: 1330016896}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7515,6 +7459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f09421d5055f9a40a9faba16a33c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   clothPartIndex: 2
 --- !u!114 &639478753
@@ -7567,19 +7512,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 639478752}
-        m_TargetAssemblyTypeName: LenghtenCloth, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &652181637
 GameObject:
   m_ObjectHideFlags: 0
@@ -7788,12 +7721,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664024727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1.05, z: 1}
   m_Children:
   - {fileID: 654667701}
   m_Father: {fileID: 1939044909}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &664024729
 BoxCollider:
@@ -7943,7 +7876,7 @@ Transform:
   m_Children:
   - {fileID: 1981963794}
   m_Father: {fileID: 1939044909}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!65 &692743331
 BoxCollider:
@@ -7971,7 +7904,7 @@ GameObject:
   - component: {fileID: 693234719}
   m_Layer: 5
   m_Name: 'ChangeTopColorBSlider '
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8011,6 +7944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   colorPart: 98
 --- !u!114 &693234720
@@ -8063,19 +7997,7 @@ MonoBehaviour:
   m_Value: -0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 693234719}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &697514270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2778249823837972550, guid: 592974485cc347741ab3cf45f360be99, type: 3}
@@ -8091,10 +8013,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.14
-  m_Height: 0.38
+  m_Radius: 0.18
+  m_Height: 0.47
   m_Direction: 0
-  m_Center: {x: 0, y: 0.05, z: 0.05214994}
+  m_Center: {x: 0, y: 0.08, z: 0.06}
 --- !u!1 &699201499
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,11 +8689,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1372309518}
-  - {fileID: 1260221265}
   - {fileID: 1939044909}
   - {fileID: 1289662673}
   - {fileID: 1456444920}
+  - {fileID: 1372309518}
+  - {fileID: 1260221265}
   m_Father: {fileID: 659825192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8805,7 +8727,7 @@ Transform:
   m_Children:
   - {fileID: 1456028342}
   m_Father: {fileID: 1578063220}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -95}
 --- !u!65 &735318026
 BoxCollider:
@@ -8818,7 +8740,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.29065964, z: 0.4}
+  m_Size: {x: 0.9, y: 0.29065964, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &744410283
 GameObject:
@@ -9454,7 +9376,7 @@ RectTransform:
   - {fileID: 992970419}
   - {fileID: 531394377}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9511,19 +9433,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 778972758}
-        m_TargetAssemblyTypeName: LenghtenClothSymmetrically, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &778972758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9536,6 +9446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d301c07ee27d243a7befafad015ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   clothPartIndex: 1
   symmetricClothPartIndex: 0
@@ -9644,7 +9555,7 @@ Transform:
   m_Children:
   - {fileID: 1069653696}
   m_Father: {fileID: 1456444920}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!65 &788508301
 BoxCollider:
@@ -9941,7 +9852,7 @@ Transform:
   m_Children:
   - {fileID: 265082375}
   m_Father: {fileID: 2026736162}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &880434038
 BoxCollider:
@@ -10197,7 +10108,7 @@ Transform:
   m_Children:
   - {fileID: 1707265010}
   m_Father: {fileID: 1785274553}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85}
 --- !u!65 &897880402
 BoxCollider:
@@ -11307,7 +11218,7 @@ Transform:
   m_Children:
   - {fileID: 1517586584}
   m_Father: {fileID: 2026736162}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1039761584
 BoxCollider:
@@ -11512,6 +11423,7 @@ RectTransform:
   m_Children:
   - {fileID: 398835020}
   - {fileID: 39831353}
+  - {fileID: 1882811315}
   - {fileID: 1463480649}
   - {fileID: 2132310791}
   m_Father: {fileID: 0}
@@ -11783,7 +11695,7 @@ Transform:
   m_Children:
   - {fileID: 848539174}
   m_Father: {fileID: 1500502933}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1094635349
 BoxCollider:
@@ -12113,7 +12025,7 @@ RectTransform:
   - {fileID: 600408276}
   - {fileID: 1182369570}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12132,6 +12044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d301c07ee27d243a7befafad015ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   clothPartIndex: 0
   symmetricClothPartIndex: 1
@@ -12185,19 +12098,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1160772882}
-        m_TargetAssemblyTypeName: LenghtenClothSymmetrically, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1164284618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f3820e9eddcdc2542ad3b659f737e151, type: 3}
@@ -12808,296 +12709,8 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders:
-  - {fileID: 697514272}
+  - {fileID: 1240187089}
   - {fileID: 1404888857}
   - {fileID: 2104619713}
   - {fileID: 380310552}
@@ -13174,13 +12787,13 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2432090755550338912, guid: 366b664380d17d44990980edc8237e67, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: df5d5fa3196bcbd4586cbf9dee3ef54d, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.62370706, z: -0.023934498}
-    m_Extent: {x: 0.308752, y: 0.443833, z: 0.1876805}
+    m_Center: {x: 0, y: 0.84511834, z: 0.01415351}
+    m_Extent: {x: 0.224542, y: 0.2224217, z: 0.15464151}
   m_DirtyAABB: 0
 --- !u!1 &1173731444
 GameObject:
@@ -13541,7 +13154,7 @@ GameObject:
   - component: {fileID: 1217578936}
   m_Layer: 5
   m_Name: ChangeBottomColorGSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13581,6 +13194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   colorPart: 103
 --- !u!114 &1217578937
@@ -13633,19 +13247,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1217578936}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1219035993
 GameObject:
   m_ObjectHideFlags: 0
@@ -13680,7 +13282,7 @@ RectTransform:
   - {fileID: 243927670}
   - {fileID: 1667918356}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13699,6 +13301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d301c07ee27d243a7befafad015ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   clothPartIndex: 1
   symmetricClothPartIndex: 0
@@ -13752,19 +13355,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1219035995}
-        m_TargetAssemblyTypeName: LenghtenClothSymmetrically, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1224345954
 GameObject:
   m_ObjectHideFlags: 0
@@ -13795,7 +13386,7 @@ Transform:
   m_Children:
   - {fileID: 1836667982}
   m_Father: {fileID: 1372309518}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1224345956
 BoxCollider:
@@ -13840,7 +13431,7 @@ Transform:
   m_Children:
   - {fileID: 324830948}
   m_Father: {fileID: 1289662673}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -145}
 --- !u!65 &1226438598
 BoxCollider:
@@ -14226,7 +13817,7 @@ RectTransform:
   - {fileID: 1181374458}
   - {fileID: 109891995}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14245,6 +13836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d301c07ee27d243a7befafad015ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   clothPartIndex: 0
   symmetricClothPartIndex: 1
@@ -14298,19 +13890,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1249681316}
-        m_TargetAssemblyTypeName: LenghtenClothSymmetrically, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1260221264
 GameObject:
   m_ObjectHideFlags: 0
@@ -14320,8 +13900,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260221265}
-  - component: {fileID: 1260221267}
-  - component: {fileID: 1260221266}
   m_Layer: 0
   m_Name: top2
   m_TagString: Untagged
@@ -14340,72 +13918,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 223266844}
   - {fileID: 1845693553}
   - {fileID: 387641181}
+  - {fileID: 223266844}
   m_Father: {fileID: 720000948}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1260221266
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260221264}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
-  m_DirtyAABB: 0
---- !u!33 &1260221267
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260221264}
-  m_Mesh: {fileID: -2432090755550338912, guid: 1c817805e50855f4e82e99d3e5da734a, type: 3}
 --- !u!1 &1265542108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
@@ -14472,13 +13990,13 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2432090755550338912, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 6bf5db4ef3362394d974d8715fc9e709, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
+    m_Center: {x: 0, y: 1.1941825, z: -0.064590506}
+    m_Extent: {x: 0.678576, y: 0.36129045, z: 0.25719148}
   m_DirtyAABB: 0
 --- !u!183 &1265542112
 Cloth:
@@ -14504,6 +14022,120 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
@@ -15351,7 +14983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Adjust Stretching of \nBottom Material"
+  m_text: Bottom material stiffnes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15437,8 +15069,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289662673}
-  - component: {fileID: 1289662675}
-  - component: {fileID: 1289662674}
   m_Layer: 0
   m_Name: niekaptur
   m_TagString: Untagged
@@ -15457,72 +15087,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 162578150}
   - {fileID: 337558454}
   - {fileID: 1226438597}
+  - {fileID: 162578150}
   m_Father: {fileID: 720000948}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1289662674
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289662672}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
-  m_DirtyAABB: 0
---- !u!33 &1289662675
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289662672}
-  m_Mesh: {fileID: -2432090755550338912, guid: f6dbaec2cfb8deb4d8e4935d7908a803, type: 3}
 --- !u!1 &1289749112
 GameObject:
   m_ObjectHideFlags: 0
@@ -15739,7 +15309,7 @@ Transform:
   m_Children:
   - {fileID: 1173731445}
   m_Father: {fileID: 1372309518}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!65 &1325867221
 BoxCollider:
@@ -16162,8 +15732,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1372309518}
-  - component: {fileID: 1372309520}
-  - component: {fileID: 1372309519}
   m_Layer: 0
   m_Name: top1
   m_TagString: Untagged
@@ -16182,72 +15750,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1224345955}
   - {fileID: 1325867220}
   - {fileID: 1604632228}
+  - {fileID: 1224345955}
   m_Father: {fileID: 720000948}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1372309519
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372309517}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
-  m_DirtyAABB: 0
---- !u!33 &1372309520
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372309517}
-  m_Mesh: {fileID: -2432090755550338912, guid: 91214cef394cd62469939bfa7e9c8823, type: 3}
 --- !u!1 &1376487684
 GameObject:
   m_ObjectHideFlags: 0
@@ -16278,7 +15786,7 @@ Transform:
   m_Children:
   - {fileID: 1323588393}
   m_Father: {fileID: 1817779387}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85}
 --- !u!65 &1376487686
 BoxCollider:
@@ -18514,8 +18022,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1456444920}
-  - component: {fileID: 1456444922}
-  - component: {fileID: 1456444921}
   m_Layer: 0
   m_Name: peleryna
   m_TagString: Untagged
@@ -18534,72 +18040,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1609848990}
   - {fileID: 788508300}
   - {fileID: 173144488}
+  - {fileID: 1609848990}
   m_Father: {fileID: 720000948}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1456444921
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456444919}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
-  m_DirtyAABB: 0
---- !u!33 &1456444922
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456444919}
-  m_Mesh: {fileID: -2432090755550338912, guid: d32b439550d60bb4e8b1032d52006e92, type: 3}
 --- !u!1 &1463480648
 GameObject:
   m_ObjectHideFlags: 0
@@ -18632,7 +18078,7 @@ RectTransform:
   - {fileID: 587611110}
   - {fileID: 1098138209}
   m_Father: {fileID: 1065795666}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18652,6 +18098,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: {fileID: 1098138210}
+  changingAllowedStateText: Check this to see how cloth behaves
+  unchangableClothsStateText: Check this to change cloths
+  _toggle: {fileID: 0}
+  symmetricToogle: {fileID: 1882811314}
+  _allCloths: []
 --- !u!114 &1463480651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18701,7 +18152,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1463480650}
         m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
-        m_MethodName: ChangeState
+        m_MethodName: SetChangeability
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19337,10 +18788,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1500502933}
-  - component: {fileID: 1500502935}
-  - component: {fileID: 1500502934}
   m_Layer: 0
-  m_Name: duza spodnica
+  m_Name: duza_spodnica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19357,72 +18806,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 501655950}
   - {fileID: 1094635348}
   - {fileID: 1718712434}
+  - {fileID: 501655950}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1500502934
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500502932}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &1500502935
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500502932}
-  m_Mesh: {fileID: -2432090755550338912, guid: df5d5fa3196bcbd4586cbf9dee3ef54d, type: 3}
 --- !u!1 &1508572737
 GameObject:
   m_ObjectHideFlags: 0
@@ -19436,7 +18825,7 @@ GameObject:
   - component: {fileID: 1508572739}
   m_Layer: 5
   m_Name: ChangeTopColorGSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19476,6 +18865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   colorPart: 103
 --- !u!114 &1508572740
@@ -19528,19 +18918,7 @@ MonoBehaviour:
   m_Value: -0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1508572739}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1517586583
 GameObject:
   m_ObjectHideFlags: 0
@@ -19616,10 +18994,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578063220}
-  - component: {fileID: 1578063222}
-  - component: {fileID: 1578063221}
   m_Layer: 0
-  m_Name: bottom1
+  m_Name: duze_spodnie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19636,72 +19012,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2100491778}
   - {fileID: 234445308}
   - {fileID: 735318025}
+  - {fileID: 2100491778}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1578063221
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578063219}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &1578063222
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578063219}
-  m_Mesh: {fileID: -2432090755550338912, guid: 366b664380d17d44990980edc8237e67, type: 3}
 --- !u!1 &1578629955
 GameObject:
   m_ObjectHideFlags: 0
@@ -19732,7 +19048,7 @@ Transform:
   m_Children:
   - {fileID: 1647375620}
   m_Father: {fileID: 1939044909}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -145}
 --- !u!65 &1578629957
 BoxCollider:
@@ -20242,7 +19558,7 @@ Transform:
   m_Children:
   - {fileID: 1233813536}
   m_Father: {fileID: 1372309518}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -145}
 --- !u!65 &1604632229
 BoxCollider:
@@ -20282,12 +19598,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609848989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1.05, z: 1}
   m_Children:
   - {fileID: 274860551}
   m_Father: {fileID: 1456444920}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1609848991
 BoxCollider:
@@ -20513,7 +19829,7 @@ RectTransform:
   - {fileID: 611333502}
   - {fileID: 595756693}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20532,6 +19848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f09421d5055f9a40a9faba16a33c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
   clothPartIndex: 2
 --- !u!114 &1659897613
@@ -20584,19 +19901,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1659897612}
-        m_TargetAssemblyTypeName: LenghtenCloth, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1667918355
 GameObject:
   m_ObjectHideFlags: 0
@@ -20801,7 +20106,7 @@ RectTransform:
   - {fileID: 7510419}
   - {fileID: 485916212}
   m_Father: {fileID: 398835020}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20820,6 +20125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4ac17cc851af94d9289969c8c2fb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
 --- !u!114 &1701266941
 MonoBehaviour:
@@ -20871,19 +20177,7 @@ MonoBehaviour:
   m_Value: 0.933
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1701266940}
-        m_TargetAssemblyTypeName: ResizeSingleCloth, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1707265009
 GameObject:
   m_ObjectHideFlags: 0
@@ -20944,7 +20238,7 @@ Transform:
   m_Children:
   - {fileID: 560147117}
   m_Father: {fileID: 1500502933}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1718712435
 BoxCollider:
@@ -21008,7 +20302,7 @@ GameObject:
   - component: {fileID: 1741782800}
   m_Layer: 5
   m_Name: ChangeTopSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21048,6 +20342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b33c7e0ef158945920602b7bce4fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   _clothManager: {fileID: 659825193}
   isTop: 1
 --- !u!114 &1741782801
@@ -21100,19 +20395,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1741782800}
-        m_TargetAssemblyTypeName: ChangeCloth, Assembly-CSharp
-        m_MethodName: ChangeCurrentTop
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1752396073
 GameObject:
   m_ObjectHideFlags: 0
@@ -21628,6 +20911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5d3f4c545400d4fa12a4c4bb3558c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: top
 --- !u!114 &1781404089
 MonoBehaviour:
@@ -21679,19 +20963,7 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1781404088}
-        m_TargetAssemblyTypeName: AdjustMaterialStretchtness, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1785274552
 GameObject:
   m_ObjectHideFlags: 0
@@ -21701,10 +20973,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785274553}
-  - component: {fileID: 1785274555}
-  - component: {fileID: 1785274554}
   m_Layer: 0
-  m_Name: bottom2
+  m_Name: spodnie2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21721,72 +20991,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1877666743}
   - {fileID: 897880401}
   - {fileID: 1981170014}
+  - {fileID: 1877666743}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1785274554
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785274552}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &1785274555
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785274552}
-  m_Mesh: {fileID: -2432090755550338912, guid: 78e732deedf05474ab11d6175f60d0c4, type: 3}
 --- !u!1 &1787781371
 GameObject:
   m_ObjectHideFlags: 0
@@ -22651,10 +21861,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1817779387}
-  - component: {fileID: 1817779389}
-  - component: {fileID: 1817779388}
   m_Layer: 0
-  m_Name: bottom3
+  m_Name: spodnie1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22671,72 +21879,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 152016537}
   - {fileID: 1376487685}
   - {fileID: 331124994}
+  - {fileID: 152016537}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1817779388
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817779386}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &1817779389
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817779386}
-  m_Mesh: {fileID: -2432090755550338912, guid: f3820e9eddcdc2542ad3b659f737e151, type: 3}
 --- !u!1 &1827874550
 GameObject:
   m_ObjectHideFlags: 0
@@ -23083,7 +22231,7 @@ Transform:
   m_Children:
   - {fileID: 13198440}
   m_Father: {fileID: 1260221265}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!65 &1845693554
 BoxCollider:
@@ -23327,7 +22475,7 @@ Transform:
   m_Children:
   - {fileID: 1861074106}
   m_Father: {fileID: 1785274553}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1877666744
 BoxCollider:
@@ -23372,12 +22520,12 @@ RectTransform:
   m_Children:
   - {fileID: 975512361}
   - {fileID: 1278517453}
-  m_Father: {fileID: 398835020}
-  m_RootOrder: 0
+  m_Father: {fileID: 1065795666}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 160}
+  m_AnchoredPosition: {x: -350, y: 210}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882811317
@@ -23429,7 +22577,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1463480650}
         m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
-        m_MethodName: MakeStretchingSymmetric
+        m_MethodName: SetSymmetricity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24219,8 +23367,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939044909}
-  - component: {fileID: 1939044911}
-  - component: {fileID: 1939044910}
   m_Layer: 0
   m_Name: kaptur
   m_TagString: Untagged
@@ -24239,72 +23385,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 664024728}
   - {fileID: 692743330}
   - {fileID: 1578629956}
+  - {fileID: 664024728}
   m_Father: {fileID: 720000948}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1939044910
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939044908}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.1941825, z: 0.021969497}
-    m_Extent: {x: 0.670415, y: 0.36129045, z: 0.1598405}
-  m_DirtyAABB: 0
---- !u!33 &1939044911
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939044908}
-  m_Mesh: {fileID: -2432090755550338912, guid: 6bf5db4ef3362394d974d8715fc9e709, type: 3}
 --- !u!1 &1947360260
 GameObject:
   m_ObjectHideFlags: 0
@@ -25313,7 +24399,7 @@ Transform:
   m_Children:
   - {fileID: 2065768186}
   m_Father: {fileID: 1785274553}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -95}
 --- !u!65 &1981170015
 BoxCollider:
@@ -25577,8 +24663,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026736162}
-  - component: {fileID: 2026736164}
-  - component: {fileID: 2026736163}
   m_Layer: 0
   m_Name: balerina
   m_TagString: Untagged
@@ -25597,72 +24681,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1039761583}
   - {fileID: 880434037}
   - {fileID: 491926647}
+  - {fileID: 1039761583}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &2026736163
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026736161}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &2026736164
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026736161}
-  m_Mesh: {fileID: -2432090755550338912, guid: b8108040f4c8a9b458fc068f1a3ca7e9, type: 3}
 --- !u!1 &2029502315
 GameObject:
   m_ObjectHideFlags: 0
@@ -25808,10 +24832,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034597645}
-  - component: {fileID: 2034597647}
-  - component: {fileID: 2034597646}
   m_Layer: 0
-  m_Name: bottom4
+  m_Name: spodnica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25828,72 +24850,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2094389612}
   - {fileID: 74774729}
   - {fileID: 163682287}
+  - {fileID: 2094389612}
   m_Father: {fileID: 220709804}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &2034597646
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034597644}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.628994, z: -0.012989499}
-    m_Extent: {x: 0.298582, y: 0.46209702, z: 0.1577645}
-  m_DirtyAABB: 0
---- !u!33 &2034597647
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034597644}
-  m_Mesh: {fileID: -2432090755550338912, guid: b641de50c54fcc241a567b55c155d302, type: 3}
 --- !u!1 &2045652492
 GameObject:
   m_ObjectHideFlags: 0
@@ -26042,7 +25004,7 @@ GameObject:
   - component: {fileID: 2073307442}
   m_Layer: 5
   m_Name: ChangeBottomColorBSlider
-  m_TagString: changingclothui
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26082,6 +25044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3373ce6e0894c4499a0347c11355382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   tag: bottom
   colorPart: 98
 --- !u!114 &2073307443
@@ -26134,19 +25097,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2073307442}
-        m_TargetAssemblyTypeName: ChangeSingleColor, Assembly-CSharp
-        m_MethodName: ModifyClothProperties
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2079137630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1038420568021588766, guid: 592974485cc347741ab3cf45f360be99, type: 3}
@@ -26276,7 +25227,7 @@ Transform:
   m_Children:
   - {fileID: 633257430}
   m_Father: {fileID: 2034597645}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2094389613
 BoxCollider:
@@ -26396,7 +25347,7 @@ Transform:
   m_Children:
   - {fileID: 247132135}
   m_Father: {fileID: 1578063220}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2100491779
 BoxCollider:
@@ -26651,7 +25602,7 @@ RectTransform:
   - {fileID: 268283046}
   - {fileID: 587492066}
   m_Father: {fileID: 1065795666}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26670,6 +25621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6366fafa3ff40b043bc3e4645b916b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clothManager: {fileID: 0}
   rightArm: {fileID: 1249681317}
   leftArm: {fileID: 778972757}
   tors: {fileID: 1659897613}
@@ -26682,6 +25634,12 @@ MonoBehaviour:
   bottomStretchiness: {fileID: 1781404089}
   stretchBottom: {fileID: 626107998}
   changeBottom: {fileID: 543603414}
+  topRed: {fileID: 625188812}
+  topGreen: {fileID: 1508572740}
+  topBlue: {fileID: 693234720}
+  bottomRed: {fileID: 234297267}
+  bottomGreen: {fileID: 1217578937}
+  bottomBlue: {fileID: 2073307443}
   toggleState: {fileID: 1463480651}
 --- !u!114 &2132310793
 MonoBehaviour:
@@ -26737,6 +25695,8 @@ MonoBehaviour:
     - m_Text: Turbine
       m_Image: {fileID: 0}
     - m_Text: Girl
+      m_Image: {fileID: 0}
+    - m_Text: Balerina
       m_Image: {fileID: 0}
     - m_Text: Superman
       m_Image: {fileID: 0}

@@ -20,7 +20,7 @@ public class ClothPart : MonoBehaviour
         }
     }
 
-    public void markVertecies(Mesh baseMesh, Mesh mesh)
+    public void markVertecies(Mesh baseMesh)
     {
         Vector3 borderPoint = Vector3.zero;
         int children = transform.childCount;

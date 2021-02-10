@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ModifyCloth : MonoBehaviour
+public abstract class ModifySingleCloth : ClothSlider
 {
     protected SingleCloth clothToHandle;
     [SerializeField] protected string tag = "top";
     
-    void Awake()
+    public override void AdditionalAwakeSetup()
     {
         GetClothToHandle();
     }
@@ -16,12 +16,6 @@ public abstract class ModifyCloth : MonoBehaviour
     {
         clothToHandle = GameObject.FindWithTag(tag).GetComponent<SingleCloth>();
     }
-
-    public abstract void ModifyClothProperties(float scaleFactor);
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
 }

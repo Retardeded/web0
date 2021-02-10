@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeCloth : MonoBehaviour
+public class ChangeCloth : ClothSlider
 {
     // Start is called before the first frame update
     [SerializeField] private ClothManager _clothManager;
     [SerializeField] private bool isTop = true;
     
-    void Awake()
+    public override void AdditionalStartSetup()
     {
-        Slider slider = GetComponent<Slider>();
         slider.minValue = 0;
         if(isTop)
             slider.maxValue = _clothManager.topSingleCloths.transform.childCount - 1;
@@ -22,14 +21,13 @@ public class ChangeCloth : MonoBehaviour
         slider.wholeNumbers = true;
     }
 
-    public void ChangeCurrentTop(float index)
+    public override void ModifyCloth()
     {
-        _clothManager.changeTop((int)index);
+        float index = slider.value;
+        
+        if (isTop)
+            _clothManager.changeTop((int) index);
+        else _clothManager.changeBottom((int) index);
     }
-    
-    public void ChangeCurrentBottom(float index)
-    {
-        _clothManager.changeBottom((int)index);
-    }
-    
+
 }

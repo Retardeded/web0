@@ -20,11 +20,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2803f431-6020-400b-99d9-450c4a4c41a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenSingleClothSymmetrically.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.web0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Orange.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/survive.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/survive.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClothManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClothManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/AdjustMaterialStretchtness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/AdjustMaterialStretchtness.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeSingleColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeSingleColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenSingleCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenCloth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenSingleCloth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenClothSymmetrically.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenClothSymmetrically.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenSingleClothSymmetrically.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifyCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifySingleCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifyCloth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifySingleCloth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleSingleCloth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleCloth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleSingleCloth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/duze_spodnie.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/duze_spodnie.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/kosz1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/kosz1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/kosz2.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/kosz2.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/balerina.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/balerina.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/duza_spodnica.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/duza_spodnica.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/kaptur.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/kaptur.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/niekaptur.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/niekaptur.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/peleryna.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/meshes/peleryna.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnica.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnica.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnie1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnie1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnie2.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spodnie2.obj.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +74,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClothSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeCloth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangingUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,13 +103,28 @@
         <option value="$PROJECT_DIR$/Assets/MenuFacade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AvatarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothPart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleCloth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeSingleColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ClothPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MenuFacade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/ChangeableClothState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/ChangeableClothSymmetricState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/UnchangeableClothState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/States/UnchangeableClothSymmetricState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util.cs" />
+        <option value="$PROJECT_DIR$/Assets/SymmetricToggle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangingUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/AdjustMaterialStretchtness.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenClothSymmetrically.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ResizeSingleCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifyCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeCloth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ChangeSingleColor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/LenghtenCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/ModifySingleCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClothSlider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModifyClothScripts/SingleCloth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClothManager.cs" />
       </list>
     </option>
   </component>
@@ -157,6 +214,23 @@
       <workItem from="1611918408599" duration="1523000" />
       <workItem from="1612022404873" duration="1678000" />
       <workItem from="1612101141367" duration="3797000" />
+      <workItem from="1612343363439" duration="107000" />
+      <workItem from="1612347401109" duration="1222000" />
+      <workItem from="1612348654890" duration="514000" />
+      <workItem from="1612526265645" duration="2736000" />
+      <workItem from="1612529798082" duration="1226000" />
+      <workItem from="1612542454789" duration="5014000" />
+      <workItem from="1612548820225" duration="3004000" />
+      <workItem from="1612599500074" duration="5918000" />
+      <workItem from="1612622981845" duration="2157000" />
+      <workItem from="1612638757570" duration="1498000" />
+      <workItem from="1612686407677" duration="2158000" />
+      <workItem from="1612732041451" duration="2735000" />
+      <workItem from="1612877810921" duration="1651000" />
+      <workItem from="1612884201769" duration="3353000" />
+      <workItem from="1612891171493" duration="242000" />
+      <workItem from="1612910444152" duration="3031000" />
+      <workItem from="1612948818695" duration="6862000" />
     </task>
     <servers />
   </component>
@@ -189,9 +263,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1609672730417" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609610078420">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612878856918">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609610078420" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1612878856918" />
   </component>
 </project>

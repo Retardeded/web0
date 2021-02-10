@@ -13510,7 +13510,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1741782800}
         m_TargetAssemblyTypeName: ChangeCloth, Assembly-CSharp
-        m_MethodName: ChangeCurrentTop
+        m_MethodName: ChangeCurrentCloth
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

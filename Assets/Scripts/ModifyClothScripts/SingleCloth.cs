@@ -6,13 +6,13 @@ using UnityEngine.Serialization;
 
 public class SingleCloth : MonoBehaviour
 {
-
-    public Dictionary<string,List<ClothPart.ClothPartData>> clothPoolData = new Dictionary<string, List<ClothPart.ClothPartData>>();
+    // zwykly cache
     public Mesh mesh;
     public Mesh baseMesh;
     bool stretching = true;
     Vector3[] vertices;
     ClothPart.ClothPartData currentClothPart;
+    private ClothPool.ClothPartFullData data;
     public string currentClothName;
 
     public MeshFilter _meshFilter;
@@ -23,34 +23,21 @@ public class SingleCloth : MonoBehaviour
         _meshFilter = GetComponent<MeshFilter>();
         _skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
     }
-    
 
-    public void SetupClothParts(string clothName)
+    public void SetupMesh(string clothName, ClothPool.ClothPartFullData data)
     {
+        currentClothName = clothName;
+        baseMesh = data.mesh;
+        this.data = data;
+        
         _meshFilter.sharedMesh = baseMesh;
         _skinnedMeshRenderer.sharedMesh = baseMesh;
         mesh = (Mesh) Instantiate(_meshFilter.sharedMesh);
-
-        if (!clothPoolData.ContainsKey(clothName))
-        {
-            int children = transform.childCount;
-            List<ClothPart.ClothPartData> list = new List<ClothPart.ClothPartData>();
-            for (int i = 0; i < children; ++i)
-            {
-                ClothPart clothPart = transform.GetChild(i).gameObject.AddComponent<ClothPart>();
-                clothPart.markVertecies(mesh, baseMesh);
-                var data = clothPart.getData();
-                list.Add(data);
-                
-            }
-            clothPoolData.Add(clothName, list);
-        }
-        currentClothName = clothName;
     }
 
     public void changeClothPart(int index)
     {
-        currentClothPart = clothPoolData[currentClothName][index];
+        currentClothPart = data.list[index];
     }
 
     public void lengthenClothPart(float scaleFactor, bool downScaleButton)

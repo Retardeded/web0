@@ -8,20 +8,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeSingleColor : ModifyCloth
+public class ChangeSingleColor : ModifySingleCloth
 {
     [SerializeField] private char colorPart;
 
-    private void Start()
+    public override void AdditionalStartSetup()
     {
-        Slider slider = GetComponent<Slider>();
         slider.wholeNumbers = false;
         slider.minValue = 0;
         slider.maxValue = 1;
     }
 
-    public override void ModifyClothProperties(float scaleFactor)
+    public override void ModifyCloth()
     {
+        float scaleFactor = slider.value;
         Color color = clothToHandle._skinnedMeshRenderer.material.color;
         switch (colorPart)
         {

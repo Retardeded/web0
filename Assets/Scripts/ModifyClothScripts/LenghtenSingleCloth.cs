@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LenghtenCloth : ModifyCloth
+public class LenghtenSingleCloth : ModifySingleCloth
 {
     [SerializeField] protected int clothPartIndex;
     protected bool scaleDownSlider = true;
-    void Start()
+
+    public override void AdditionalStartSetup()
     {
-        Slider slider = GetComponent<Slider>();
         if (Mathf.Abs(slider.maxValue) > Mathf.Abs(slider.minValue))
             scaleDownSlider = true;
         else
@@ -18,8 +18,9 @@ public class LenghtenCloth : ModifyCloth
         }
     }
 
-    public override void ModifyClothProperties(float scaleFactor)
+    public override void ModifyCloth()
     {
+        float scaleFactor = slider.value;
         clothToHandle.changeClothPart(clothPartIndex);
         clothToHandle.lengthenClothPart(scaleFactor, scaleDownSlider);
     }
